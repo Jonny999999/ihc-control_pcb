@@ -1,4 +1,4 @@
-63243757133816
+64892836542217
 custom_footprints
 IRF7455
 
@@ -278,4 +278,11 @@ my_wannenstecker_2x3_rm254
 
 0
 6
+6
+custom_footprints
+my_wannenstecker_2x5
+
+
+0
+10
 6
