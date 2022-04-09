@@ -30,14 +30,14 @@ backtrack=0 #if default/undefined caused unwanted moves in copper without retrac
 tile-x=1
 tile-y=1
 tolerance=0.0500
-zchange=40.0000
+zchange=30.0000
 zchange-absolute=false
 zero-start=true
-zsafe=5.0000
+zsafe=2.0000
 
 # Mill options
 extra-passes=0
-mill-feed=300 #default 600mm/min
+mill-feed=500 #default 600mm/min
 mill-speed=20000
 offset=0.1200
 voronoi=false
@@ -53,6 +53,7 @@ nog81=false
 nog91-1=false
 onedrill=false
 zdrill=-1.7500
+drills-available=0.8,1
 
 # Outline options
 bridges=1.0000
