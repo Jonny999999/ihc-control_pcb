@@ -6,7 +6,6 @@
 
 G94       (Millimeters per minute feed rate.)
 G21       (Units == Millimeters.)
-G91.1     (Incremental arc distance mode.)
 G90       (Absolute coordinates.)
 G00 S20000     (RPM spindle speed.)
 
@@ -21,7 +20,7 @@ M3      (Spindle on clockwise.)
 G0 Z2.00000
 G04 P1.00000
 
-G81 R2.00000 Z-1.75000 F200.00000 X-55.51800 Y30.93000
+G81 R2.00000 Z-1.75000 F100.00000 X-55.51800 Y30.93000
 X-45.51800 Y30.93000
 X-36.15000 Y21.05000
 X-28.65000 Y21.05000
@@ -152,7 +151,7 @@ M3      (Spindle on clockwise.)
 G0 Z2.00000
 G04 P1.00000
 
-G81 R2.00000 Z-1.75000 F200.00000 X-97.74700 Y27.26600
+G81 R2.00000 Z-1.75000 F100.00000 X-97.74700 Y27.26600
 X-97.65000 Y40.98000
 X-97.65000 Y54.53200
 X-97.65000 Y68.09100

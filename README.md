@@ -82,6 +82,17 @@ Machine used: Stepcraft 420
 - Change units to mm/min instead of default mm/s
 
 ## pcb2gcode
+### notes for next time milling:
+2022.04.09 first milling action for this project:
+- Z-zero on multiple places... at 2 edges pcb was apparently lower (only scratched) -> had to mill again
+- make screenshot of absolute coordinates of origin (in case of accidential shift / position loss)
+- check position before drillin holes
+- fixing: screws around the pcb are probably enough (check bend)
+- design pcb slightly smaller for more tolerance...
+- kicad define custom origin
+- check if origin is the same in every gerber/gcode file (verify with gcode viewer?)
+
+### process
 - kicad: export/plot pcb to gerber files
 - kicad: generate drill file
 ```
@@ -102,3 +113,4 @@ see config file: pcb2gcode/millproject
 - the trick was to use a negative offet (almost half the line width) to get more or less clean characters
 `pcb2gcode --config millproject_text`
 - generates pcb2gcode/out/text/back.ngc
+note: check if there is an offset/scaling issue to other files (back, drill). last time text got engraved into traces even though it matched on the other side

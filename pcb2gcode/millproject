@@ -37,11 +37,11 @@ zsafe=2.0000
 
 # Mill options
 extra-passes=0
-mill-feed=500 #default 600mm/min
+mill-feed=400 #default 600mm/min
 mill-speed=20000
-offset=0.1200
+offset=0.400 #intentional bigger offset than necessary, using 0.4 there were almost no small strips beeing left over between insolation lines.
 voronoi=false
-zwork=-0.2000
+zwork=-0.2000 #usin 60degree cutter resulted in ~0.42mm line
 
 # Drill options
 drill-feed=200
@@ -50,7 +50,7 @@ drill-speed=20000
 milldrill=false
 #@#milldrill-diameter=3.0000
 nog81=false
-nog91-1=false
+nog91-1=true
 onedrill=false
 zdrill=-1.7500
 drills-available=0.8,1
