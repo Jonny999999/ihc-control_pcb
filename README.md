@@ -85,12 +85,14 @@ Machine used: Stepcraft 420
 ### notes for next time milling:
 2022.04.09 first milling action for this project:
 - Z-zero on multiple places... at 2 edges pcb was apparently lower (only scratched) -> had to mill again
+- XY-zero NOT on file origin! (the offset is caused by outline cutter diameter) -> load outline gcode, x,y zero next to border (note offset) -> confirm with moving on other side of pcb
 - make screenshot of absolute coordinates of origin (in case of accidential shift / position loss)
-- check position before drillin holes
+- check position before drilling holes
 - fixing: screws around the pcb are probably enough (check bend)
 - design pcb slightly smaller for more tolerance...
-- kicad define custom origin
+- kicad define custom origin => tried this, setting "drill/place file origin" and tick the checkbox at plot  has no effect to pcb2gcode in any way
 - check if origin is the same in every gerber/gcode file (verify with gcode viewer?)
+- when generating gcode for text separately, also include at least outline, otherwise there is an offset (origin makes no sense)
 
 ### process
 - kicad: export/plot pcb to gerber files
