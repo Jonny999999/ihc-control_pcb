@@ -68,18 +68,33 @@
 
 
 
+# Notes for next version:
+## pcb design
+- add resistor and diode for slowly charging the input capacitor (limit charging current)
+- add diode or/and jumper for isp programmer, noticed that current is flowing from board 5v to programmer (input resistor got hot only when programmer connected)
+
+## milling process
+- text engraving: slightly reduce Z depth 
+- see notes next time milling below...
+
+
+
+
 
 # Notes pcb milling
 Machine used: Stepcraft 420
 
-## Parameters WinPC-NC
+## WinPC-NC
+### Parameters
 - WinPC-NC has weird default z coorinates direction
 !!!!!  
   => **Z coordinates have to be inverted** (otherwise will crash)
   -> parameters -> dateiformat -> z-koordinaten invertieren
-!!!!!  
-
 - Change units to mm/min instead of default mm/s
+### Notes
+- Problem stepper noise without movement, but winpc-nc actually thinks that it moved coordinates - especially Z
+  - solution1: remove top section of gcode (simple G1 commands worked - see gcode generated with estlcame that is compatible)
+  - solution2: switch from windows in virtualbox to native windows
 
 ## pcb2gcode
 ### notes for next time milling:
@@ -94,7 +109,8 @@ Machine used: Stepcraft 420
 - check if origin is the same in every gerber/gcode file (verify with gcode viewer?)
 - when generating gcode for text separately, also include at least outline, otherwise there is an offset (origin makes no sense)
 
-### process
+## Instructions / Process
+### export files
 - kicad: export/plot pcb to gerber files
 - kicad: generate drill file
 ```
@@ -104,6 +120,7 @@ outline=./in/pcb-ihc_kicad-Edge_Cuts.gbr
 drill=./in/pcb-ihc_kicad-PTH.drl
 see config file: pcb2gcode/millproject
 ```
+### generate gcode
 - run pcb2gcode: `ihc-control_pcb/pcb2gcode> pcb2gcod`  
   will use millproject file for parameters as default config
 
@@ -112,7 +129,14 @@ see config file: pcb2gcode/millproject
 - kicad: moved text to be engraved into pcb on separate layer User1.  
 - also export/plot User1 with other gerber files
 - use separate millproject_text parameter file with pcb2gcode
+- NOTE: also include outline and maybe front in that millproject, even though that output is not used. It is necessary that the origin fits, otherwise there will be an offset!
 - the trick was to use a negative offet (almost half the line width) to get more or less clean characters
 `pcb2gcode --config millproject_text`
 - generates pcb2gcode/out/text/back.ngc
 note: check if there is an offset/scaling issue to other files (back, drill). last time text got engraved into traces even though it matched on the other side
+
+
+### post processing
+- slightly smooth copper layer of  pvb using grinding wool
+- drill holes for big 4mm2 2 pin terminals to 1.5mm unless drilled with 1mm only on cnc
+- 
