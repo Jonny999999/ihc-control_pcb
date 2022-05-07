@@ -2,12 +2,12 @@
 # IHC schematic
 
 
-##Steckerbelegung
-###2Pol stecker 6mm2:
+## Steckerbelegung
+### 2Pol stecker 6mm2:
 1: Anlasser 12V versorgung (9)
 2: Gluehspirale
 
-###6Pol? PC #Stecker 3#
+### 6Pol? PC #Stecker 3#
 1: leer
 2: Scheinwerfer rechts AR; Scheinwerfer links AL    - rechts oben
 2a: Bremslichtschalter LS 1/2
@@ -15,7 +15,7 @@
 3a: Bremslichtschalter LS 2/2
 4: Scheinwerfer links AL, Scheinwerfer rechts AR    - rechts unten
 
-###6Pol?`PB   #Stecker 2#
+### 6Pol?`PB   #Stecker 2#
 1: (20) Anlasser (Start)                - links oben
 2: (22) Kraftstoffanzeiger (geber)
 3: (24) Hupe 2/2
@@ -23,7 +23,7 @@
 5: (28) Fernthermomenter (geber)
 6: (30) Spannungsregler lm??
 
-###6pol PA     #Stecker 1#
+### 6pol PA     #Stecker 1#
 1: (31,32) Steckdose; Klemme FD seitenlichter BR CR (Blink-Begrenzungslampe rechts, Schlussbegrenzungsleuchte rechts)       -links oben
 2: (37) Klemme LB   -> Seitenlichter BL, CL (Blink-Begrenzungslampe links, Schluss-blinkleuchte links)              - links mitte?
                     -> Steckdose
@@ -71,7 +71,13 @@
 # Notes for next version:
 ## pcb design
 - add resistor and diode for slowly charging the input capacitor (limit charging current)
-- add diode or/and jumper for isp programmer, noticed that current is flowing from board 5v to programmer (input resistor got hot only when programmer connected)
+- add diode or/and jumper for isp programmer, noticed that current is flowing from board 5v to programmer (input resistor got hot only when programme connected) (alternatively jumper on programmer can be used for this...)
+- ADD FUSES
+  - add fuse for 12v supply to 5v regulator
+  - fuses for mosfets?
+  - fuses for relay?
+- add mounting holes / at least make some space for third hole
+
 
 ## milling process
 - text engraving: slightly reduce Z depth 
