@@ -4,7 +4,8 @@ Repo for designing a custom pcb that controlls the electrical components of an I
 
 # TOC
 - [Links](#links)
-- [Schematic, Layout](#schematic--layout)
+- [Overview](#overview)
+- [Open Schematic and Layout](#open-schematic-and-layout)
 - [Connector Pin-assignment](#connector-pin-assignment)
   * [New Connectors](#new-connectors)
   * [Old Connectors](#old-connectors)
@@ -18,15 +19,30 @@ Repo for designing a custom pcb that controlls the electrical components of an I
   * [Step 4: mill outline](#step-4--mill-outline)
   * [Step 5: post processing](#step-5--post-processing)
 - [Notes for next version (pcb design)](#notes-for-next-version--pcb-design-)
-- [Notes for next pcb milling](#notes-for-next-pcb-milling)
+- [Notes for next pcb (milling)](#notes-for-next-pcb-milling)
   * [CNC-Control (WinPC-NC)](#cnc-control--winpc-nc-)
+    + [Parameters](#parameters)
+    + [Occurred problems](#occurred-problems)
   * [G-code generation (pcb2gcode)](#g-code-generation--pcb2gcode-)
-
+    + [Notes for next time](#notes-for-next-time-)
+    + [Gerber export (kicad)](#gerber-export--kicad-)
 
 
 # Links
 - Project documentation: https://pfusch.zone/control-pcb
 - Firmware repo: https://github.com/Jonny999999/ihc-control_fw
+
+
+
+# Overview
+### Schematic
+[pcb-ihc_schem_v4-milled-v1.1.pdf](/kicad/export/pcb-ihc_schem_v4-milled-v1.1.pdf)
+
+### PCB-layout
+<p align="center">
+  <img src="/kicad/export/layout.png" width="40%" />
+  <img src="/kicad/export/3d-view_bottom-right.png" width="50%" style="vertical-align: top;" />
+</p>
 
 
 
